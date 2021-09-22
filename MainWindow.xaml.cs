@@ -41,6 +41,11 @@ namespace WPFCalculator
         {
             string buttonContent = (string)((Button)e.OriginalSource).Content;
 
+            if (resultLabel.Text.StartsWith("0"))
+            {
+                resultLabel.Text = "";
+            }
+
             switch (buttonContent)
             {
                 
@@ -57,6 +62,7 @@ namespace WPFCalculator
                         break;
                     }
                 default:
+                   
                     resultLabel.Text += buttonContent;
                     break;
             }

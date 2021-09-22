@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFCalculator"
         mc:Ignorable="d"
-        Title="Calculator" Height="350" WindowStyle="ThreeDBorderWindow" MaxWidth="350" MaxHeight="350" Width="350" MinWidth="350" MinHeight="350">
-    <Grid x:Name="MainGrid" Background="White">
+        Title="Calculator" Height="350" WindowStyle="ThreeDBorderWindow" MaxWidth="350" MaxHeight="350" Width="350" MinWidth="350" MinHeight="350" Icon="pngwing.com.png">
+    <Grid x:Name="MainGrid" Background="#FF323435">
         <Grid.ColumnDefinitions>
 
 
@@ -25,28 +25,62 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Grid.Column="0" Text="" Grid.ColumnSpan="4" x:Name="resultLabel" />
+        <TextBlock Grid.Row="0" x:Name="resultLabel" AutomationProperties.HelpText="00" RenderTransformOrigin="0.655,0.471" FlowDirection="RightToLeft" FontFamily="Segoe UI Semibold" SnapsToDevicePixels="True" ClipToBounds="True" Margin="0,0,12,27" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="307" Grid.ColumnSpan="5" Foreground="White" >
+            <TextBlock.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.LayoutTransform>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Text="0"/></TextBlock>
 
-        <Button Grid.Column="0" Grid.Row="1"> 1 </Button>
-        <Button Grid.Column="1" Grid.Row="1"> 2 </Button>
-        <Button Grid.Column="2" Grid.Row="1"> 3 </Button>
-        <Button Grid.Column="0" Grid.Row="2"> 4 </Button>
-        <Button Grid.Column="1" Grid.Row="2"> 5 </Button>
-        <Button Grid.Column="2" Grid.Row="2"> 6 </Button>
-        <Button Grid.Column="0" Grid.Row="3"> 7 </Button>
-        <Button Grid.Column="1" Grid.Row="3"> 8 </Button>
-        <Button Grid.Column="2" Grid.Row="3"> 9 </Button>
-        <Button Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"> 0 </Button>
+        <Button Grid.Column="0" Grid.Row="1" FontFamily="Comic Sans MS" FontSize="16" UseLayoutRounding="False" Background="#FF232323" Foreground="White">1
+        </Button>
+        <Button Grid.Column="1" Grid.Row="1" FontFamily="Comic Sans MS" FontSize="16" Background="#FF232323" Foreground="White">2
+        </Button>
+        <Button Grid.Column="2" Grid.Row="1" FontFamily="Comic Sans MS" FontSize="16" Background="#FF232323" Foreground="White">3
+        </Button>
+        <Button Grid.Column="0" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" Background="#FF232323" Foreground="White">4
+        </Button>
+        <Button Grid.Column="1" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" Background="#FF232323" Foreground="White">5
+        </Button>
+        <Button Grid.Column="2" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" Background="#FF232323" Foreground="White">6
+        </Button>
+        <Button Grid.Column="0" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="16" Background="#FF232323" Foreground="White">7
+        </Button>
+        <Button Grid.Column="1" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="16" Background="#FF232323" Foreground="White">8
+        </Button>
+        <Button Grid.Column="2" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="16" Background="#FF232323" Foreground="White">9
+        </Button>
+        <Button Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" FontFamily="Comic Sans MS" FontSize="16" Background="#FF232323" Foreground="White">0
+        </Button>
 
-        <Button Grid.Column="2" Grid.Row="4"> . </Button>
+        <Button Grid.Column="2" Grid.Row="4" FontFamily="Comic Sans MS" FontSize="16" Background="#FF232323" Foreground="White">.
+        </Button>
 
-        <Button Grid.Column="4" Grid.Row="1"> EC </Button>
-        <Button Grid.Column="4" Grid.Row="2"> C </Button>
-        <Button Grid.Column="4" Grid.Row="3" Grid.RowSpan="2"> = </Button>
+        <Button Grid.Column="4" Grid.Row="1" FontFamily="Comic Sans MS" FontSize="16" Background="#FF232323" Foreground="White">EC
+        </Button>
+        <Button Grid.Column="4" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" Background="#FF232323" Foreground="White">C
+        </Button>
+        <Button Grid.Column="4" Grid.Row="3" Grid.RowSpan="2" FontFamily="Comic Sans MS" FontSize="16" Background="#FF232323" Foreground="White">=
+        </Button>
 
-        <Button Grid.Column="3" Grid.Row="1"> / </Button>
-        <Button Grid.Column="3" Grid.Row="2"> * </Button>
-        <Button Grid.Column="3" Grid.Row="3"> - </Button>
-        <Button Grid.Column="3" Grid.Row="4"> + </Button>
+        <Button Grid.Column="3" Grid.Row="1" FontFamily="Comic Sans MS" FontSize="16" Background="#FF232323" Foreground="White">/
+        </Button>
+        <Button Grid.Column="3" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" Background="#FF232323" Foreground="White">*
+        </Button>
+        <Button Grid.Column="3" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="16" Background="#FF232323" Foreground="White">-
+        </Button>
+        <Button Grid.Column="3" Grid.Row="4" FontFamily="Comic Sans MS" FontSize="16" Background="#FF232323" Foreground="White">+
+        </Button>
     </Grid>
 </Window>

@@ -46,7 +46,7 @@ namespace WPFCalculator.Zyrian.Validator
             return false;
         }
 
-        public bool IsOperator(char symbol) => (AllOperators.Contains(symbol.ToString())) ? true : false;
+        public bool IsOperator(char symbol) => AllOperators.Contains(symbol.ToString());
 
         public bool IsNumericOperand(char symbol) => !IsOperator(symbol);
 
@@ -66,6 +66,6 @@ namespace WPFCalculator.Zyrian.Validator
 
         public string FillExpression() => addableOperand;
 
-        private bool NextSymbolIsVoid(int i, string expression) => i >= expression.Length ? true : false;
+        private bool NextSymbolIsVoid(int i, string expression) => i >= expression.Length;
     }
 }
